@@ -16,6 +16,7 @@ Vanilla JS/TS로 만드는 미니 리액트.
 | [docs/learning.md](docs/learning.md) | 학습 확인 노트 |
 
 AI 진입 지침: `CLAUDE.md` (Claude Code), `AGENTS.md` (Codex)
+검증 루프: [harness/README.md](harness/README.md) — 결과는 `reviews/`
 
 ## 실행 방법
 
