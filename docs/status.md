@@ -11,8 +11,8 @@
 | 진행 중 작업 | 없음 |
 | 담당 | — |
 | 브랜치 | `docs/T00-workflow-setup` |
-| 블로커 | T00 기초 결정(D01, D02, D03, D16) 대기 — D19는 확정 |
-| 다음 작업 | T00 |
+| 블로커 | T00a는 로컬에 Codex CLI 설치·로그인이 필요함 |
+| 다음 작업 | T00a (워크플로우 문서 검증·수정) → T00 |
 | 마지막 갱신 | 2026-11-09 |
 
 ## 인계 기록
@@ -28,6 +28,14 @@
 - 학습 확인: (완료 / 미완료 — learning.md 항목)
 - 다음 사람이 먼저 볼 것:
 ```
+
+### 2026-11-09 — Claude (채팅) — 검증 루프 구조
+- 한 일: `harness/` 생성 (review-loop.sh, 검증·수정 지시, T00a 검토 기준), D16 확정 반영, T00a 추가
+- 검증 결과: 스크립트 문법 검사만 함. Codex 미설치라 실제 루프는 실행하지 않음
+- 남은 일: 로컬에서 `harness/review-loop.sh T00a` 실행
+- 새로 생긴 미정 사항: 없음
+- 학습 확인: 해당 없음
+- 다음 사람이 먼저 볼 것: `harness/README.md`
 
 ### 2026-11-09 — Claude (채팅) — 워크플로우 구성
 - 한 일: 공통 문서 세트 생성 (`docs/requirements.md`, `design.md`, `tasks.md`, `status.md`, `workflow.md`, `learning.md`), 진입 지침 `CLAUDE.md`, `AGENTS.md`, README 문서 지도

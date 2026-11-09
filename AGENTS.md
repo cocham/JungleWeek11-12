@@ -9,6 +9,9 @@
 4. `docs/design.md` — 관련 설계, 확정/미정 구분
 5. `docs/requirements.md` — 필요할 때
 
+## 역할
+- Codex는 검증 담당이다. `harness/review-loop.sh`로 호출되면 `harness/prompts/verify.md`를 따르고 파일을 수정하지 않는다.
+
 ## 핵심 규칙 (요약, 자세한 건 workflow.md)
 - 한 번에 `tasks.md`의 작업 하나만 한다.
 - `[미정]` 설계를 코드로 먼저 정하지 않는다. 결정이 필요하면 멈추고 묻는다.

@@ -17,11 +17,11 @@
 
 ## 2. 두 AI 역할
 
-`[미정]` → design.md D16
-
-제안: 작업마다 구현 담당과 검증 담당을 다른 AI로 나눈다. 같은 AI가 만들고 채점하지 않게 하려는 것.
-- 예: Claude Code 구현 → Codex 검증, 다음 작업은 반대로
-- 담당은 `status.md` "담당" 칸에 적는다.
+`[확정]` (D16) Claude Code가 구현·수정, Codex가 검증한다.
+- 연결은 `harness/`로 한다. 실행법은 `harness/README.md`
+- 검증 결과는 `reviews/<작업ID>/review-N.md`, 수정 기록은 `fix-N.md`
+- 검증 결과 마지막 줄 `VERDICT: PASS` / `VERDICT: FAIL`로 통과 여부를 판단한다
+- 수정·재검증은 최대 2회. 그래도 FAIL이면 사람에게 넘긴다
 
 ## 3. 한 작업의 사이클
 
