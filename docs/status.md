@@ -8,11 +8,11 @@
 | 항목 | 내용 |
 |---|---|
 | 단계 | Phase 0 (준비) |
-| 진행 중 작업 | T00a — 검증 중 (수정 1회차 완료, Codex 재검증 대기) |
-| 구현 담당 / 검증 담당 | Claude (채팅 세션, 로컬 Claude CLI 없음) / Codex |
+| 진행 중 작업 | T00a — 검증 중 (수정 2회차 완료, 마지막 Codex 재검증 대기) |
+| 구현 담당 / 검증 담당 | Claude (채팅 세션) / Codex (로컬 하네스) |
 | 브랜치 | `docs/T00-workflow-setup` |
-| 최신 검증 결과 | `reviews/T00a/review-0.md`, `reviews/harness-review.md` — 둘 다 FAIL, 수정 1회차 이후 버전에는 무효 |
-| 블로커 | 하네스 자동 루프는 로컬에 Claude CLI가 있어야 함. 그 전까지 Codex 검증은 수동 |
+| 최신 검증 결과 | 로컬 `reviews/T00a/run-20261109-210444/review-0.md` (`b0ca1ae`) — C7만 FAIL. 수정 2회차 이후 버전에는 무효 |
+| 블로커 | 로컬 Claude CLI가 인증 오류(조직 설정으로 구독 접근 차단)로 하네스 수정 단계를 못 돌림 |
 | 다음 작업 | T00a 재검증 → PASS면 T00 |
 | 마지막 갱신 | 2026-11-09 |
 
@@ -31,6 +31,16 @@
 - 학습 확인: (해당 없음 / 대기 / 완료 — learning.md 절)
 - 다음 사람이 먼저 볼 것:
 ```
+
+### 2026-11-09 — Claude (채팅) — T00a 수정 2회차
+- 구현 담당 / 검증 담당: Claude (채팅) / Codex (로컬 하네스)
+- 한 일: 로컬 재검증에서 FAIL로 나온 C7(검증 지시의 절 번호 ③→④) 수정. 기록은 `reviews/T00a/fix-2.md`
+- 검증 대상 버전: 수정 전 `b0ca1ae` (스냅샷 `10f77b3e1901`)
+- 검증 결과: 로컬 실행 review-0 — C1–C6, C8 PASS, C7 FAIL. 로컬 Claude CLI는 인증 오류로 종료 코드 1
+- 남은 일: 수정 없이 마지막 재검증 (`harness/review-loop.sh T00a 0`)
+- 새로 생긴 미정 사항: 없음
+- 학습 확인: 해당 없음
+- 다음 사람이 먼저 볼 것: `reviews/T00a/fix-2.md`
 
 ### 2026-11-09 — Claude (채팅) — T00a 수정 1회차
 - 구현 담당 / 검증 담당: Claude (채팅) / Codex
